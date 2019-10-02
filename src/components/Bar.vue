@@ -15,10 +15,10 @@
     <v-btn icon>
       <v-icon>mdi-magnify</v-icon>
     </v-btn>
-
     <v-menu
       left
       bottom
+      v-if="title === 'Profile'"
     >
       <template v-slot:activator="{ on }">
         <v-btn icon v-on="on">
@@ -30,7 +30,7 @@
         <v-list-item
           v-for="n in 5"
           :key="n"
-          @click="() => {}"
+          @click="optionClick"
         >
           <v-list-item-title>Option {{ n }}</v-list-item-title>
         </v-list-item>
@@ -50,5 +50,10 @@
     export default Vue.extend({
         name: 'Bar',
         props: ['title'],
+        methods: {
+            optionClick(a) {
+                console.log(a)
+            }
+        }
     });
 </script>

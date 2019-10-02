@@ -31,6 +31,8 @@ export default Vue.extend({
                 this.$router.push({
                     path,
                 });
+            } else {
+                this.$vuetify.goTo(0)
             }
         },
     },
