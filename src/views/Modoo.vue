@@ -7,7 +7,7 @@
 
 <script lang="ts">
     import Vue from 'vue';
-    import ItemMoim from '@/components/ItemMoim';
+    import ItemMoim from '@/components/ItemMoim.vue';
 
     export default Vue.extend({
         data: () => ({
